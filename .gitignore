@@ -1,0 +1,8 @@
+.DS_Store
+.env
+.vscode
+.editorconfig
+node_modules/
+vendor/
+build/
+*.log
