@@ -47,6 +47,8 @@ class Init {
 	 * Init blocks
 	 */
 	private function init_blocks() {
-		register_block_type( $this->plugin_path . 'build/block-link-group' );
+		register_block_type( $this->plugin_path . 'build/link-group-block' );
+		register_block_type( $this->plugin_path . 'build/meta-field-block' );
+		register_block_type( $this->plugin_path . 'build/query-with-template-part-block' );
 	}
 }

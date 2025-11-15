@@ -1,0 +1,79 @@
+# Copyright (C) 2025 André Amorim
+# This file is distributed under the same license as the AFCA Blocks Library plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: AFCA Blocks Library 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/afca-blocks-"
+"library\n"
+"Last-Translator: \n"
+"Language-Team: Português\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-11-13T22:03:10+00:00\n"
+"PO-Revision-Date: 2025-11-14 21:27+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: afca-blocks-library\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.8.0; wp-6.8.3; php-8.2.27"
+
+#. Description of the plugin
+#: afca-blocks-library.php
+msgid "A collection of custom Gutenberg blocks for WordPress."
+msgstr "Uma coleção de blocos Gutenberg personalizados para WordPress."
+
+#. Plugin Name of the plugin
+#: afca-blocks-library.php
+msgid "AFCA Blocks Library"
+msgstr "AFCA Blocks Library"
+
+#. Author of the plugin
+#: afca-blocks-library.php
+msgid "André Amorim"
+msgstr "André Amorim"
+
+#: build/block-link-group/index.js:81 src/block-link-group/edit.js:40
+#: build/block-link-group/index.js:40
+msgid "Aria Label"
+msgstr "Etiqueta Aria"
+
+#: build/block-link-group/block.json src/block-link-group/block.json
+msgctxt "block description"
+msgid "Add blocks inside a link group."
+msgstr "Permite adicionar uma hiperligação a um conjunto de blocos."
+
+#: build/block-link-group/block.json src/block-link-group/block.json
+msgctxt "block title"
+msgid "Link Group Block"
+msgstr "Grupo c\\ hiperligação"
+
+#: build/block-link-group/index.js:53 src/block-link-group/edit.js:19
+#: build/block-link-group/index.js:19
+msgid "Link Settings"
+msgstr "Configurações da ligação"
+
+#: build/block-link-group/index.js:62 src/block-link-group/edit.js:26
+#: build/block-link-group/index.js:26
+msgid "Link Target"
+msgstr "Comportamento"
+
+#: build/block-link-group/index.js:68 src/block-link-group/edit.js:30
+#: build/block-link-group/index.js:30
+msgid "New tab (_blank)"
+msgstr "Novo separador (_blank)"
+
+#: build/block-link-group/index.js:75 src/block-link-group/edit.js:35
+#: build/block-link-group/index.js:35
+msgid "Rel attribute"
+msgstr "Atributo Rel"
+
+#: build/block-link-group/index.js:65 src/block-link-group/edit.js:29
+#: build/block-link-group/index.js:29
+msgid "Same tab (_self)"
+msgstr "No mesmo separador (_self)"
+
+#: build/block-link-group/index.js:56 src/block-link-group/edit.js:21
+#: build/block-link-group/index.js:21
+msgid "URL"
+msgstr "Endereço"

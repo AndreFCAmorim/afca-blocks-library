@@ -1,0 +1,146 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "afca-blocks/swiper-slider",
+	"version": "0.1.0",
+	"title": "Swiper Slider Block",
+	"description": "Block for displaying the swiper slider on the block editor.",
+	"category": "media",
+	"icon": "slides",
+	"textdomain": "afca-blocks-library",
+	"keywords": ["swiper", "slider"],
+	"attributes": {
+		"autoPlay": {
+			"type": "boolean",
+			"default": true
+		},
+		"loop": {
+			"type": "boolean",
+			"default": true
+		},
+		"navigation": {
+			"type": "boolean",
+			"default": true
+		},
+		"pagination": {
+			"type": "boolean",
+			"default": false
+		},
+		"slidesPerView": {
+			"type": "number",
+			"default": 1
+		},
+		"spaceBetweenImages": {
+			"type": "number",
+			"default": 1
+		},
+		"speed": {
+			"type": "number",
+			"default": 300
+		},
+		"allowFullScreen": {
+			"type": "boolean",
+			"default": true
+		},
+		"sliderBorderRadius": {
+			"type": "number",
+			"default": 0
+		},
+		"arrowIconsBackgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"arrowIconsColor": {
+			"type": "string",
+			"default": ""
+		},
+		"arrowIconsBorderRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"arrowIconsBorderColor": {
+			"type": "string",
+			"default": ""
+		},
+		"arrowIconsBorderWidth": {
+			"type": "number",
+			"default": 1
+		},
+		"paginationType": {
+			"type": "number",
+			"default": 0
+		},
+		"paginationBackgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"fullScreenCloseButtonColor": {
+			"type": "string",
+			"default": ""
+		},
+		"fullScreenCloseButtonBackgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"mosaicGallery": {
+			"type": "boolean",
+			"default": null
+		},
+		"itemsCount": {
+			"type": "number",
+			"default": 0
+		},
+		"smallCountRadius": {
+			"type": "string",
+			"default": "8px"
+		},
+		"mediumCountRadius": {
+			"type": "string",
+			"default": "8px"
+		},
+		"largeCountRadius": {
+			"type": "string",
+			"default": "8px"
+		}
+	},
+	"variations": [
+		{
+			"name": "slider-layout-default",
+			"title": "Default slider",
+			"icon": "slides",
+			"scope": ["block"],
+			"isDefault": true,
+			"attributes": {
+				"mosaicGallery": {
+					"type": "boolean",
+					"default": false
+				}
+			}
+		},
+		{
+			"name": "slider-layout-mosaic-gallery",
+			"title": "Mosaic image gallery",
+			"icon": "slides",
+			"scope": ["block"],
+			"isDefault": false,
+			"attributes": {
+				"slidesPerView": {
+					"type": "number",
+					"default": 4
+				},
+				"spaceBetweenImages": {
+					"type": "string",
+					"default": "10px"
+				},
+				"mosaicGallery": {
+					"type": "boolean",
+					"default": true
+				}
+			}
+		}
+	],
+	"editorScript": "file:./index.js",
+	"viewScript": ["afca-blocks-library-view-script"],
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

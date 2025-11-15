@@ -5,6 +5,12 @@ A collection of custom Gutenberg blocks for WordPress.
 ## Description
 AFCA Blocks Library is a WordPress plugin that bundles multiple custom Gutenberg blocks into a single, easy-to-manage library.
 
+## Blocks
+1. Link Group Block, allows to have a block wrapped by a hyperlink that allows to have inner blocks.
+2. Meta Field Block, returns a meta value stored on wp_postmeta.
+3. Query With Template Part Block, allows to have template parts in the default Query Loop Block.
+4. Swiper Slider Block, allows to have a slider with swiper js.
+
 ## Installation
 1. Clone or download this repository into your `wp-content/plugins/` folder.
 2. Run `npm install`.

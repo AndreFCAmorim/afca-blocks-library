@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2025-11-13T22:03:10+00:00\n"
-"PO-Revision-Date: 2025-11-15 12:23+0000\n"
+"PO-Revision-Date: 2025-11-15 12:18+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: afca-blocks-library\n"
 "Language: pt_PT\n"
@@ -32,17 +32,17 @@ msgstr "AFCA Blocks Library"
 #: src/swiper-slider-block/controls-default.js:192
 #: build/swiper-slider-block/index.js:192
 msgid "Allow full screen"
-msgstr "Permitir ecrã completo"
+msgstr ""
 
 #: build/meta-field-block/index.js:146 src/meta-field-block/controls.js:148
 #: build/meta-field-block/index.js:148
 msgid "Alternative text for image"
-msgstr "Texto alternativo para imagem"
+msgstr ""
 
 #: build/meta-field-block/index.js:110 src/meta-field-block/controls.js:85
 #: build/meta-field-block/index.js:85
 msgid "Alternative text for meta value"
-msgstr "Texto alternativo para valor meta"
+msgstr ""
 
 #. Author of the plugin
 #: afca-blocks-library.php
@@ -76,7 +76,7 @@ msgstr ""
 #: build/swiper-slider-block/index.js:446
 #: build/swiper-slider-block/index.js:496
 msgid "Background"
-msgstr "Fundo"
+msgstr ""
 
 #: build/swiper-slider-block/index.js:282
 #: src/swiper-slider-block/controls-default.js:305

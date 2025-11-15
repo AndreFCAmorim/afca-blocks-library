@@ -1,0 +1,36 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.interface-interface-skeleton__content {
+	overflow-x: hidden;
+}
+
+.afca-blocks-library {
+	overflow-x: auto;
+
+	.block-editor-block-list__layout {
+		display: grid;
+		grid-auto-flow: column;
+		column-gap: 25px;
+		grid-auto-columns: minmax(85%, 1fr);
+	}
+
+	.wp-block-cover__inner-container {
+		display: initial;
+	}
+
+	&__navigation {
+		display: none;
+	}
+
+	/* Add new slide button small */
+	.block-list-appender {
+		> .block-editor-inserter,
+		> .block-list-appender__toggle {
+			display: inline-block;
+			width: auto;
+		}
+	}
+}

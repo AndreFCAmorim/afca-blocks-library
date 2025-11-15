@@ -1,0 +1,169 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+:root {
+	--smallCountRadius: 8px;
+	--mediumCountRadius: 8px;
+	--largeCountRadius: 8px;
+}
+
+.wp-block-create-block-afca-blocks-library {
+	background-color: #000;
+	color: #fff;
+	padding: 2px;
+}
+
+.afca-blocks-library {
+	&__navigation {
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			width: 32px;
+			height: 32px;
+
+			svg {
+				height: 14px;
+			}
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	.block-slider-normal {
+		.wp-block-cover {
+			display: inherit !important;
+		}
+	}
+
+	&__items-number {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		background-color: rgba(0, 0, 0, .4);
+		pointer-events: none;
+		border-radius: var(--smallCountRadius);
+
+		span {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			color: var(--wp--preset--color--custom-01-neutral-01-fill);
+			font-family: var(--wp--preset--font-family--lato);
+			font-size: var(--wp--preset--font-size--small);
+			font-style: normal;
+			font-weight: 400;
+		}
+	}
+
+	.swiper-slide {
+		margin-bottom: 0;
+		cursor: pointer;
+	}
+
+	#fullscreen-swiper {
+		display: none;
+		height: 90vh;
+		overflow: hidden;
+		position: fixed;
+		top: 5%;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 10000;
+	}
+
+	#fullscreen-swiper .swiper-slide {
+		background: none;
+		display: inherit !important;
+		cursor: auto;
+	}
+
+	#fullscreen-swiper .swiper-slide {
+		height: 75vh;
+		max-height: 650px;
+		margin: auto;
+
+		img {
+			margin: auto;
+		}
+	}
+
+	#fullscreen-swiper-backdrop {
+		background: #000;
+		display: none;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 9999;
+	}
+
+	#fullscreen-swiper-close {
+		border: 1px solid #fff;
+		color: #fff;
+		cursor: pointer;
+		font-size: 24px;
+		padding: 1px 6px 0;
+		position: absolute;
+		top: 0;
+		right: 15px;
+		z-index: 10000;
+		width: 20px;
+	}
+
+	#fullscreen-swiper .swiper-pagination-bullets {
+		bottom: -2px;
+	}
+
+	#fullscreen-swiper .swiper-pagination-bullet {
+		background: #fff;
+		opacity: 0.5;
+	}
+
+	#fullscreen-swiper .swiper-pagination-bullet-active {
+		background: #000;
+	}
+
+	#fullscreen-swiper .swiper-pagination-custom {
+		color: var(--wp--preset--color--custom-01-neutral-01-fill);
+		font-family: var(--wp--preset--font-family--lato);
+		font-size: var(--wp--preset--font-size--small);
+	}
+}
+
+.no-scroll {
+	height: 100%;
+	overflow: hidden;
+	margin-top: 0;
+}
+
+/* Medium and up */
+@media only screen and (min-width: 640px) {
+	.afca-blocks-library {
+		&__items-number {
+			width: calc((100% / 2) - (10px / 2));
+			border-radius: var(--mediumCountRadius);
+		}
+	}
+}
+
+/* XLarge and up */
+@media only screen and (min-width: 1200px) {
+	.afca-blocks-library {
+		&__items-number {
+			width: calc((100% / 4) - (30px / 4));
+			border-radius: var(--largeCountRadius);
+		}
+	}
+}
