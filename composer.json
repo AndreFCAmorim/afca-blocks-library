@@ -1,0 +1,26 @@
+{
+	"name": "afca-blocks/library",
+	"description": "A collection of custom Gutenberg blocks for WordPress.",
+	"type": "wordpress-plugin",
+	"autoload": {
+		"psr-4": {
+			"Afca\\Blocks\\Library\\": "includes/"
+		}
+	},
+	"authors": [
+		{
+			"name": "André Amorim",
+			"email": "contact@andreamorim.site"
+		}
+	],
+	"require-dev": {
+		"wp-coding-standards/wpcs": "3.0.0",
+		"phpcsstandards/phpcsutils": "^1.0",
+		"phpcsstandards/phpcsextra": "1.2.0"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}
