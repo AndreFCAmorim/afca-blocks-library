@@ -7,6 +7,9 @@ import {
 	SelectControl,
 	__experimentalInputControl as InputControl,
 	CheckboxControl,
+	ColorPicker,
+	BaseControl,
+	Button,
 } from '@wordpress/components';
 import { NETWORKS } from './icons.js';
 
@@ -20,6 +23,8 @@ export default function Controls( props ) {
 		showLabel,
 		labelText,
 		alignment,
+		iconColor,
+		iconBgColor,
 	} = props.attributes;
 
 	const handleNetworkToggle = ( networkId, checked ) => {
@@ -107,6 +112,75 @@ export default function Controls( props ) {
 						props.setAttributes( { alignment: value } )
 					}
 				/>
+			</PanelBody>
+
+			<PanelBody
+				title={ __( 'Colors', 'afca-blocks-library' ) }
+				initialOpen={ false }
+			>
+				<BaseControl
+					label={ __( 'Icon Color', 'afca-blocks-library' ) }
+					help={ __( 'Overrides the default icon/SVG color. Leave empty to use defaults.', 'afca-blocks-library' ) }
+				>
+					{ iconColor && (
+						<div style={ { marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' } }>
+							<span
+								style={ {
+									display: 'inline-block',
+									width: '24px',
+									height: '24px',
+									borderRadius: '4px',
+									background: iconColor,
+									border: '1px solid #ccc',
+								} }
+							/>
+							<Button
+								isSmall
+								variant="tertiary"
+								onClick={ () => props.setAttributes( { iconColor: '' } ) }
+							>
+								{ __( 'Reset', 'afca-blocks-library' ) }
+							</Button>
+						</div>
+					) }
+					<ColorPicker
+						color={ iconColor || '#000000' }
+						onChange={ ( value ) => props.setAttributes( { iconColor: value } ) }
+						enableAlpha={ false }
+					/>
+				</BaseControl>
+
+				<BaseControl
+					label={ __( 'Icon Background Color', 'afca-blocks-library' ) }
+					help={ __( 'Overrides the default icon background. Leave empty to use defaults.', 'afca-blocks-library' ) }
+				>
+					{ iconBgColor && (
+						<div style={ { marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' } }>
+							<span
+								style={ {
+									display: 'inline-block',
+									width: '24px',
+									height: '24px',
+									borderRadius: '4px',
+									background: iconBgColor,
+									border: '1px solid #ccc',
+								} }
+							/>
+							<Button
+								isSmall
+								variant="tertiary"
+								onClick={ () => props.setAttributes( { iconBgColor: '' } ) }
+							>
+								{ __( 'Reset', 'afca-blocks-library' ) }
+							</Button>
+						</div>
+					) }
+					<ColorPicker
+						color={ iconBgColor || '#ffffff' }
+						onChange={ ( value ) => props.setAttributes( { iconBgColor: value } ) }
+						enableAlpha={ false }
+					/>
+				</BaseControl>
 			</PanelBody>
 
 			<PanelBody

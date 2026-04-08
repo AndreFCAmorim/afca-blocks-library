@@ -31,8 +31,8 @@ export const NETWORK_COLORS = {
  * @param {number} size    - Icon size in pixels.
  * @return {JSX.Element}
  */
-export function getIcon( network, style = 'filled', size = 24 ) {
-	const color = style === 'filled' ? '#ffffff' : NETWORK_COLORS[ network ];
+export function getIcon( network, style = 'filled', size = 24, fillColor = null ) {
+	const color = fillColor || ( style === 'filled' ? '#ffffff' : NETWORK_COLORS[ network ] );
 
 	const icons = {
 		facebook: (

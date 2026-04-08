@@ -14,6 +14,8 @@ $show_label       = ! empty( $attributes['showLabel'] );
 $label_text       = $attributes['labelText'] ?? 'Share:';
 $alignment        = $attributes['alignment'] ?? 'left';
 $post_id          = $block->context['postId'] ?? get_the_ID();
+$custom_icon_color   = ! empty( $attributes['iconColor'] ) ? sanitize_hex_color( $attributes['iconColor'] ) : '';
+$custom_icon_bg      = ! empty( $attributes['iconBgColor'] ) ? sanitize_hex_color( $attributes['iconBgColor'] ) : '';
 
 // Retrieve post data.
 $post_url   = rawurlencode( get_permalink( $post_id ) );
@@ -79,16 +81,16 @@ foreach ( $enabled_networks as $network_id ) {
 
 	// Compute icon fill color and background.
 	if ( 'filled' === $icon_style ) {
-		$svg_fill   = '#ffffff';
-		$bg_style   = 'background:' . esc_attr( $color ) . ';';
+		$svg_fill   = $custom_icon_color ?: '#ffffff';
+		$bg_style   = 'background:' . esc_attr( $custom_icon_bg ?: $color ) . ';';
 		$border_style = '';
 	} elseif ( 'outlined' === $icon_style ) {
-		$svg_fill   = $color;
-		$bg_style   = 'background:transparent;';
-		$border_style = 'border:2px solid ' . esc_attr( $color ) . ';';
+		$svg_fill   = $custom_icon_color ?: $color;
+		$bg_style   = 'background:' . esc_attr( $custom_icon_bg ?: 'transparent' ) . ';';
+		$border_style = 'border:2px solid ' . esc_attr( $custom_icon_color ?: $color ) . ';';
 	} else { // minimal
-		$svg_fill   = $color;
-		$bg_style   = 'background:transparent;';
+		$svg_fill   = $custom_icon_color ?: $color;
+		$bg_style   = 'background:' . esc_attr( $custom_icon_bg ?: 'transparent' ) . ';';
 		$border_style = '';
 	}
 

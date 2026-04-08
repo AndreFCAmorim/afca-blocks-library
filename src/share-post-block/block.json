@@ -50,6 +50,14 @@
 		"alignment": {
 			"type": "string",
 			"default": "left"
+		},
+		"iconColor": {
+			"type": "string",
+			"default": ""
+		},
+		"iconBgColor": {
+			"type": "string",
+			"default": ""
 		}
 	},
 	"usesContext": ["postId"],

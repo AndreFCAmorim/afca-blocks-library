@@ -13,6 +13,8 @@ export default function Edit( props ) {
 		showLabel,
 		labelText,
 		alignment,
+		iconColor,
+		iconBgColor,
 	} = props.attributes;
 
 	const blockProps = useBlockProps( {
@@ -29,16 +31,23 @@ export default function Edit( props ) {
 	};
 
 	const getBackground = ( networkId ) => {
+		if ( iconBgColor ) return iconBgColor;
 		if ( iconStyle === 'filled' ) return NETWORK_COLORS[ networkId ];
-		if ( iconStyle === 'outlined' ) return 'transparent';
 		return 'transparent';
 	};
 
 	const getBorder = ( networkId ) => {
 		if ( iconStyle === 'outlined' ) {
-			return `2px solid ${ NETWORK_COLORS[ networkId ] }`;
+			const color = iconColor || NETWORK_COLORS[ networkId ];
+			return `2px solid ${ color }`;
 		}
 		return 'none';
+	};
+
+	const getIconColor = ( networkId ) => {
+		if ( iconColor ) return iconColor;
+		if ( iconStyle === 'filled' ) return '#ffffff';
+		return NETWORK_COLORS[ networkId ];
 	};
 
 	return (
@@ -73,9 +82,10 @@ export default function Edit( props ) {
 							alignItems: 'center',
 							justifyContent: 'center',
 							cursor: 'default',
+							color: getIconColor( network.id ),
 						} }
 					>
-						{ getIcon( network.id, iconStyle, iconSize ) }
+						{ getIcon( network.id, iconStyle, iconSize, getIconColor( network.id ) ) }
 					</span>
 				) ) }
 			</div>
