@@ -148,11 +148,7 @@ if ( $show_label && $label_text ) {
 	);
 }
 
-// Wrapper classes.
-$wrapper_classes = sprintf(
-	'afca-blocks-share-post align-%s',
-	esc_attr( $alignment )
-);
+$wrapper_attributes = get_block_wrapper_attributes();
 
 $icons_wrapper = sprintf(
 	'<div class="afca-share-icons" style="display:flex;flex-wrap:wrap;align-items:center;gap:%dpx;">%s</div>',
@@ -161,8 +157,8 @@ $icons_wrapper = sprintf(
 );
 
 printf(
-	'<div class="%s">%s%s</div>',
-	esc_attr( $wrapper_classes ),
+	'<div %s>%s%s</div>',
+	$wrapper_attributes,
 	$label_html,
 	$icons_wrapper
 );
