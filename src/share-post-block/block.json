@@ -1,0 +1,61 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "afca-blocks/share-post",
+	"version": "0.1",
+	"title": "Share This Post",
+	"category": "theme",
+	"icon": "share",
+	"description": "Display social sharing icons for the current post.",
+	"supports": {
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"attributes": {
+		"enabledNetworks": {
+			"type": "array",
+			"default": ["facebook", "linkedin", "whatsapp", "email", "twitter"]
+		},
+		"iconSize": {
+			"type": "number",
+			"default": 24
+		},
+		"iconStyle": {
+			"type": "string",
+			"default": "filled"
+		},
+		"iconSpacing": {
+			"type": "number",
+			"default": 8
+		},
+		"openInNewTab": {
+			"type": "boolean",
+			"default": true
+		},
+		"showLabel": {
+			"type": "boolean",
+			"default": false
+		},
+		"labelText": {
+			"type": "string",
+			"default": "Share:"
+		},
+		"alignment": {
+			"type": "string",
+			"default": "left"
+		}
+	},
+	"usesContext": ["postId"],
+	"textdomain": "afca-blocks-library",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

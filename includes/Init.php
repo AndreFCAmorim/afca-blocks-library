@@ -37,7 +37,7 @@ class Init {
 	 */
 	private function load_js_translations() {
 		wp_set_script_translations(
-			'afca-blocks-link-group-editor-script',
+			'afca-blocks-library-editor-script',
 			'afca-blocks-library',
 			$this->plugin_path . 'languages'
 		);
@@ -49,6 +49,8 @@ class Init {
 	private function init_blocks() {
 		register_block_type( $this->plugin_path . 'build/link-group-block' );
 		register_block_type( $this->plugin_path . 'build/meta-field-block' );
-		register_block_type( $this->plugin_path . 'build/query-with-template-part-block' );
+		//register_block_type( $this->plugin_path . 'build/query-with-template-part-block' );
+		register_block_type( $this->plugin_path . 'build/share-post-block' );
+		register_block_type( $this->plugin_path . 'build/swiper-slider-block' );
 	}
 }

@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "afca-blocks/link-group",
+	"version": "1.0",
+	"title": "Link Group Block",
+	"category": "theme",
+	"icon": "admin-links",
+	"description": "Add blocks inside a link group.",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"groupLinkUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"groupLinkTarget": {
+			"type": "string",
+			"default": "_self"
+		},
+		"groupLinkRel": {
+			"type": "string",
+			"default": ""
+		},
+		"groupAriaLabel": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "afca-blocks-library",
+	"scriptTranslations": true,
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

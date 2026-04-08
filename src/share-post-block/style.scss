@@ -1,0 +1,51 @@
+.afca-blocks-share-post {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+
+	&.align-center {
+		justify-content: center;
+	}
+
+	&.align-right {
+		justify-content: flex-end;
+	}
+
+	&.align-left {
+		justify-content: flex-start;
+	}
+
+	.afca-share-label {
+		font-weight: 600;
+		margin-right: 4px;
+	}
+
+	.afca-share-icons {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.afca-share-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		transition: opacity 0.2s ease, transform 0.2s ease;
+		flex-shrink: 0;
+
+		svg {
+			display: block;
+		}
+
+		&:hover {
+			opacity: 0.85;
+			transform: scale(1.1);
+		}
+	}
+
+	a.afca-share-icon {
+		cursor: pointer;
+	}
+}
