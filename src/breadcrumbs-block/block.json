@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "afca-blocks/breadcrumbs",
+	"version": "0.1",
+	"title": "Breadcrumbs",
+	"category": "theme",
+	"icon": "arrow-right-alt",
+	"description": "Displays Rank Math breadcrumbs via shortcode.",
+	"supports": {
+		"html": false,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"textdomain": "afca-blocks-library",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
