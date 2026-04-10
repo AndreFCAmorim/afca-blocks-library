@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "afca-blocks/shortcode",
+	"version": "0.1",
+	"title": "Shortcode",
+	"category": "theme",
+	"icon": "shortcode",
+	"description": "Render any shortcode in a template part.",
+	"supports": {
+		"html": false,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"attributes": {
+		"shortcode": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "afca-blocks-library",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

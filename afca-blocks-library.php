@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: AFCA Blocks Library
- * Description: A collection of custom Gutenberg blocks for WordPress.
+ * Description: A collection of custom Gutenberg blocks for WordPress: Rank Math Breadcrumbs, Shortcode for Template Parts, Link Group, Meta Field, Share Post Socials and Swiper Slider.
  * Requires at least: 6.8
  * Requires PHP:      8.0
  * Author: André Amorim
- * Version: 1.0
+ * Version: 2.0
  * Text Domain: afca-blocks-library
  * Domain Path: /languages
  */
